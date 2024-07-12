@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE cardapio SYSTEM "definicoes.dtd">
 <cardapio>
     <prato id="P01">
         <nome>Lasanha</nome>
@@ -10,7 +11,7 @@
             <ingrediente>queijo</ingrediente>
             <ingrediente>carne moida</ingrediente>
         </ingredientes>
-        <preco>7,00</preco>    
+        <preco moeda="BRL">7,00&reais;</preco>    
         <calorias>2.000</calorias>
         <tempopreparo>30 min</tempopreparo>    
     </prato>
@@ -22,7 +23,7 @@
             <ingrediente>frutas da sua preferencia</ingrediente>
             <ingrediente>leite condensado</ingrediente>
         </ingredientes>
-        <preco>05,00</preco>    
+        <preco moeda="BRL">05,00&reais;</preco>    
         <calorias>700</calorias>
         <tempopreparo>10 min</tempopreparo>    
     </prato>
@@ -35,7 +36,7 @@
             <ingrediente>carnes da sua preferencia</ingrediente>
             <ingrediente>temperos da sua preferencia</ingrediente>
         </ingredientes>
-        <preco>12,00</preco>    
+        <preco moeda="BRL">12,00&reais;</preco>    
         <calorias>1000</calorias>
         <tempopreparo>1 hora</tempopreparo>    
     </prato>
@@ -48,7 +49,7 @@
             <ingrediente>queijo</ingrediente>
             <ingrediente>presunto</ingrediente>
         </ingredientes>
-        <preco>04,00</preco>    
+        <preco moeda="BRL">04,00&reais;</preco>    
         <calorias>90</calorias>
         <tempopreparo>15 min</tempopreparo>    
     </prato>
@@ -61,7 +62,7 @@
             <ingrediente>carne da sua preferencia</ingrediente>
             <ingrediente>e vegetais</ingrediente>
         </ingredientes>
-        <preco>8,00</preco>    
+        <preco moeda="BRL">8,00&reais;</preco>    
         <calorias>2000</calorias>
         <tempopreparo>30 min</tempopreparo>    
     </prato>    
