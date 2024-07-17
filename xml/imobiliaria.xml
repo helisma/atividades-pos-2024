@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE imobiliaria [
+<!ELEMENT imobiliaria (imovel+)>
+<!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas, valor)>
+<!ELEMENT descricao (#PCDATA)>
+<!ELEMENT proprietario ((nome, email, telefone+)|(nome, telefone))>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefone (#PCDATA)>
+<!ELEMENT endereco (rua, bairro, cidade, (numero)?)>
+<!ELEMENT rua (#PCDATA)>
+<!ELEMENT bairro (#PCDATA)>
+<!ELEMENT cidade (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT caracteristicas (tamanho, numQuartos+, numBanheiros+)>
+<!ELEMENT tamanho (#PCDATA)>
+<!ELEMENT numQuartos (#PCDATA)>
+<!ELEMENT numBanheiros (#PCDATA)>
+<!ELEMENT valor (#PCDATA)>
+
+<!ATTLIST email type (pessoal|trabalho|outro) "pessoal">
+]>
+
+<imobiliaria>
+    <imovel>
+        <descricao>Casa ampla com jardim</descricao>
+        <proprietario>
+            <nome>Fernanda Santos</nome>
+            <email type="pessoal">fernanda.santos@example.com</email>
+            <telefone>(11) 9876-5432</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Av. das Palmeiras</rua>
+            <bairro>Jardins</bairro>
+            <cidade>São Paulo</cidade>
+            <numero>345</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>300 m²</tamanho>
+            <numQuartos>4</numQuartos>
+            <numBanheiros>3</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 1,200,000.00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Apartamento moderno próximo ao metrô</descricao>
+        <proprietario>
+            <nome>Carlos Lima</nome>
+            <email type="trabalho">carlos.lima@corretora.com</email>
+            <telefone>(21) 7654-3210</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua do Comércio</rua>
+            <bairro>Centro</bairro>
+            <cidade>Rio de Janeiro</cidade>
+            <numero>789, apto 502</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>120 m²</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 500,000.00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Casa térrea com piscina</descricao>
+        <proprietario>
+            <nome>Ana Souza</nome>
+            <telefone>(31) 1234-5678</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Av. das Flores</rua>
+            <bairro>Vila Verde</bairro>
+            <cidade>Belo Horizonte</cidade>
+        </endereco>
+        <caracteristicas>
+            <tamanho>250 m²</tamanho>
+            <numQuartos>3</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 800,000.00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Chácara com vista panorâmica</descricao>
+        <proprietario>
+            <nome>Ricardo Oliveira</nome>
+            <email type="pessoal">ricardo.oliveira@example.com</email>
+            <telefone>(41) 8765-4321</telefone>
+            <telefone>(41) 9876-5432</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Estrada das Águias</rua>
+            <bairro>Jardim das Águas</bairro>
+            <cidade>Curitiba</cidade>
+            <numero/>
+        </endereco>
+        <caracteristicas>
+            <tamanho>1500 m²</tamanho>
+            <numQuartos>5</numQuartos>
+            <numBanheiros>4</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 2,000,000.00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Loft sofisticado no centro histórico</descricao>
+        <proprietario>
+            <nome>Patrícia Costa</nome>
+            <email type="trabalho">patricia.costa@arquiteta.com</email>
+            <telefone>(51) 2345-6789</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua do Rosário</rua>
+            <bairro>Centro Histórico</bairro>
+            <cidade>Porto Alegre</cidade>
+            <numero>123, loft 3</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>80 m²</tamanho>
+            <numQuartos>1</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 350,000.00</valor>
+    </imovel>
+</imobiliaria>
