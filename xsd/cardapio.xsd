@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+xmlns:xs="http://umcardapio.org"
+targetNamespace="http://umcardapio.org"
+elementFormDefault="qualified">
+
+<simpleType name="precoType">
+    <restriction base="string">
+        <pattern value="\d+,\d{2};"/>
+    </restriction>
+</simpleType>
+
+    <element name="cardapio">
+        <complexType>
+            <sequence>
+                <element name="prato" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element name="nome" type="string"/>
+                            <element name="descricao" type="string"/>
+                            <element name="ingredientes">
+                                <complexType>
+                                    <sequence>
+                                        <element name="ingrediente" type="string" maxOccurs="unbounded"/>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="preco" type="precoType"/>
+                            <element name="calorias" type="integer"/>
+                            <element name="tempopreparo" type="string"/>
+                        </sequence>
+                        <attribute name="prato" type="integer" use="required"/>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>
