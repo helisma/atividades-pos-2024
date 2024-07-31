@@ -1,0 +1,27 @@
+{
+    "imobiliaria": {
+        "imovel": {
+            "descricao": "Casa ampla com jardim",
+            "proprietario": {
+                "nome": "Fernanda Santos",
+                "email": {
+                    "type": "pessoal",
+                    "value": "fernanda.santos@example.com"
+                },
+                "telefone": "(11) 9876-5432"
+            },
+            "endereco": {
+                "rua": "Av. das Palmeiras",
+                "bairro": "Jardins",
+                "cidade": "São Paulo",
+                "numero": 345
+            },
+            "caracteristicas": {
+                "tamanho": "300 m²",
+                "numQuartos": 4,
+                "numBanheiros": 3
+            },
+            "valor": "R$ 1,200,000.00"
+        }
+    }
+}

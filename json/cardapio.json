@@ -1,0 +1,23 @@
+{
+    "cardápio": [
+        {
+            "prato id": 1,
+            "nome": "Lasanha à Bolonhesa",
+            "ingredientes": [
+                "Massa de lasanha",
+                "Carne moída",
+                "Cebola",
+                "Alho",
+                "Tomate",
+                "Queijo muçarela",
+                "Queijo parmesão",
+                "Azeite",
+                "Sal",
+                "Pimenta"
+            ],
+            "preco": 25.00,
+            "calorias": 800,
+            "tempo de preparo": "1 hora e 30 minutos"
+        }
+    ]
+}

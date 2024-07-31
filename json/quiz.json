@@ -1,0 +1,124 @@
+{
+    "quiz": {
+        "versao": "1.0",
+        "disciplina": "Matemática",
+        "professor": {
+            "nome": "Prof. João",
+            "matricula": "123456"
+        },
+        "turma": "A",
+        "data": "2024-07-19",
+        "questoes": [
+            {
+                "enunciado": "Qual é a fórmula do cálculo da área de um círculo?",
+                "pontuacao": 5,
+                "alternativas": [
+                    {
+                        "texto": "A = π * r^2",
+                        "correta": true
+                    },
+                    {
+                        "texto": "A = 2 * π * r",
+                        "correta": false
+                    },
+                    {
+                        "texto": "A = π * r",
+                        "correta": false
+                    },
+                    {
+                        "texto": "A = 2 * r",
+                        "correta": false
+                    }
+                ]
+            },
+            {
+                "enunciado": "Qual é a capital do Brasil?",
+                "pontuacao": 3,
+                "alternativas": [
+                    {
+                        "texto": "Brasília",
+                        "correta": true
+                    },
+                    {
+                        "texto": "Rio de Janeiro",
+                        "correta": false
+                    },
+                    {
+                        "texto": "São Paulo",
+                        "correta": false
+                    },
+                    {
+                        "texto": "Salvador",
+                        "correta": false
+                    }
+                ]
+            },
+            {
+                "enunciado": "Quem escreveu o livro \"Dom Quixote\"?",
+                "pontuacao": 4,
+                "alternativas": [
+                    {
+                        "texto": "Miguel de Cervantes",
+                        "correta": true
+                    },
+                    {
+                        "texto": "William Shakespeare",
+                        "correta": false
+                    },
+                    {
+                        "texto": "Friedrich Nietzsche",
+                        "correta": false
+                    },
+                    {
+                        "texto": "Jorge Luis Borges",
+                        "correta": false
+                    }
+                ]
+            },
+            {
+                "enunciado": "Qual é o maior planeta do Sistema Solar?",
+                "pontuacao": 4,
+                "alternativas": [
+                    {
+                        "texto": "Júpiter",
+                        "correta": true
+                    },
+                    {
+                        "texto": "Saturno",
+                        "correta": false
+                    },
+                    {
+                        "texto": "Terra",
+                        "correta": false
+                    },
+                    {
+                        "texto": "Vênus",
+                        "correta": false
+                    }
+                ]
+            },
+            {
+                "enunciado": "Qual destes países não faz parte do continente africano?",
+                "pontuacao": 3,
+                "alternativas": [
+                    {
+                        "texto": "Índia",
+                        "correta": true
+                    },
+                    {
+                        "texto": "Egito",
+                        "correta": false
+                    },
+                    {
+                        "texto": "Nigéria",
+                        "correta": false
+                    },
+                    {
+                        "texto": "África do Sul",
+                        "correta": false
+                    }
+                ]
+            }
+        ]
+    }
+}
