@@ -1,37 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-xmlns:xs="http://umcardapio.org"
-targetNamespace="http://umcardapio.org"
-elementFormDefault="qualified">
+    xmlns:c="http://cardapio.org"
+    targetNamespace="http://cardapio.org"
+    elementFormDefault="qualified">
 
-<simpleType name="precoType">
-    <restriction base="string">
-        <pattern value="\d+,\d{2};"/>
-    </restriction>
-</simpleType>
+    <!-- Elementos -->
 
-    <element name="cardapio">
+    <element name="nome" type="string"></element>
+    <element name="descricao" type="string"></element>
+    <element name="ingrediente" type="string"></element>
+    <element name="calorias" type="integer"></element>
+    <element name="tempoPreparo" type="string"></element>
+
+    <element name="ingredientes">
         <complexType>
             <sequence>
-                <element name="prato" maxOccurs="unbounded">
-                    <complexType>
-                        <sequence>
-                            <element name="nome" type="string"/>
-                            <element name="descricao" type="string"/>
-                            <element name="ingredientes">
-                                <complexType>
-                                    <sequence>
-                                        <element name="ingrediente" type="string" maxOccurs="unbounded"/>
-                                    </sequence>
-                                </complexType>
-                            </element>
-                            <element name="preco" type="precoType"/>
-                            <element name="calorias" type="integer"/>
-                            <element name="tempopreparo" type="string"/>
-                        </sequence>
-                        <attribute name="prato" type="integer" use="required"/>
-                    </complexType>
-                </element>
+                <element ref="c:ingredientes" minOccurs="1" maxOccurs="unbounded"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="preco">
+        <simpleType>
+            <restriction base="decimal">
+                <fractionDigits value="2"/>
+            </restriction>
+        </simpleType>
+    </element>
+
+    <element name="prato">
+        <complexType>
+            <sequence>
+                <element ref="c:nome"/>
+                <element ref="c:descricao"/>
+                <element ref="c:ingredientes"/>
+                <element ref="c:preco"/>
+                <element ref="c:calorias"/>
+                <element ref="c:tempoPreparo"/>
+            </sequence>
+            <attribute name="id" type="integer" use="required"/>
+        </complexType>
+    </element>
+
+    <element name="cadapio">
+        <complexType>
+            <sequence>
+                <element ref="c:prato" maxOccurs="unbounded"/>
             </sequence>
         </complexType>
     </element>
