@@ -1,38 +1,34 @@
-#foi dividido em partes
-
 import zeep
 
-# Define a URL do WSDL para o serviço CountryInfoService
-wsdl_url = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL"
+# define a URL do WSDL
+url_countries = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL"
+url_number = "https://www.dataaccess.com/webservicesserver/NumberConversion.wso?WSDL"
 
-# Define a URL do WSDL para o serviço NumberConversion
-wsdl_url = "https://www.dataaccess.com/webservicesserver/NumberConversion.wso?WSDL"
+# inicializa o cliente zeep
+client = zeep.Client(wsdl=url_countries)
+fun_number = zeep.Client(wsdl=url_number)
 
-# Inicializa o cliente zeep
-client = zeep.Client(wsdl=wsdl_url)
+print("1 - Para saber o nome do país\n2 - Para ter numeros em extenso")
+print("-"*30)
+op= int(input("Qual opção: "))
 
-# Define o código do país para Noruega (NO)
-country_code = "NO"
+if op==1:
+	# define o código do país para BR
+	country= str(input("Digite a SIGLA do país (em maiúsculo): "))
 
-# Faz a chamada do serviço para obter o nome da capital
-result = client.service.CapitalCity(
-    sCountryISOCode=country_code
-)
+	# faz a chamada do serviço
+	result = client.service.CountryName(
+		sCountryISOCode=country
+	)
+	# imprime o resultado
+	print(f"O nome de/o {country} é: {result}")
 
-# Imprime o nome da capital da Noruega
-print(f"A capital da Noruega (NO) é {result}")
+elif op == 2:
+	num= int(input("Digite o número: "))
 
-
-# Inicializa o cliente zeep
-client = zeep.Client(wsdl=wsdl_url)
-
-# Define o número a ser convertido
-number_to_convert = 223
-
-# Faz a chamada do serviço para converter o número por extenso
-result = client.service.NumberToWords(
-    ubiNum=number_to_convert
-)
-
-# Imprime o número por extenso em inglês
-print(f"O número {number_to_convert} por extenso é: {result}")
+	# faz a chamada do serviço
+	result = fun_number.service.NumberToWords(
+		ubiNum=num
+	)
+	# imprime o resultado
+	print(f"O nome de/o {num} é: {result}")
